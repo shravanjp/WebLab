@@ -1,0 +1,144 @@
+<html>
+    <head>
+        <title>Simple Calculator</title>
+        <style>
+            table{
+                margin: auto;
+                margin-top: 190px;
+                width: 50%;
+                height: 50%;
+            }
+
+            table,td,th{
+                border: 1px solid black;
+                border-collapse: collapse;
+                text-align: center;
+                background-color: aqua;
+            }
+        </style>
+        <script type="text/javascript">
+            function calculate(clicked_id){
+                var value1 = parseFloat(document.getElementById("value1").value);
+                var value2 = parseFloat(document.getElementById("value2").value);
+                if(isNaN(value1) || isNaN(value2)){
+                    alert("Enter the Valid Numbers");
+                } 
+                else{
+
+                    if(clicked_id == "add"){
+                        document.getElementById("ans").value=(value1+value2);
+                    }
+                    if(clicked_id == "sub"){
+                        document.getElementById("ans").value=(value1-value2);
+                    }
+                    if(clicked_id == "mul"){
+                        document.getElementById("ans").value=(value1*value2);
+                    }
+                    if(clicked_id == "divide"){
+                        document.getElementById("ans").value=(value1/value2);
+                    }   
+
+                } 
+            }
+
+            function clearField(){
+                document.getElementById("value1").value = "0";
+                document.getElementById("value2").value = "0";
+                document.getElementById("ans").value="";
+            }
+        </script>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <th colspan="4">Simple Calculator</th>
+            </tr>
+            <tr>
+                <td>Value1</td><td><input type="text" id="value1" value="0"></td>
+                <td>Value2</td><td><input type="text" id="value2" value="0"></td>
+            </tr>
+            <tr>
+                <td><input type="button" id="add" value="Addition" onclick="calculate(this.id)"></td>
+                <td><input type="button" id="sub" value="Subtraction" onclick="calculate(this.id)"></td>
+                <td><input type="button" id="mul" value="Multiplication" onclick="calculate(this.id)"></td>
+                <td><input type="button" id="divide" value="Division" onclick="calculate(this.id)"></td>
+            </tr>
+            <tr>
+                <td>Answer:</td><td><input type="text" id="ans" value="" disabled="true"></td>
+                <td colspan="2"><input type="button" id="cls" value="CLEAR ALL" onclick="clearField()"></td>
+            </tr>
+        </table>
+    </body>
+</html>
+
+<!-- 
+    
+// <!DOCTYPE HTML>
+// <html>
+// <head>
+
+// <style>
+// table, td, th
+// {
+//  border: 1px solid black;
+//  width: 33%;
+//  text-align: center;
+//  background-color: DarkGray;
+//  border-collapse: collapse;
+// }
+// table {margin: auto; }
+// input {text-align:right; }
+// </style>
+
+// <script type="text/javascript">
+// function calc(clicked_id)
+// {
+// var val1 = parseFloat(document.getElementById("value1").value);
+// var val2 = parseFloat(document.getElementById("value2").value);
+// if (isNaN(val1)||isNaN(val2))
+//  alert("ENTER VALID NUMBER");
+// else if(clicked_id=="add")
+//  document.getElementById("answer").value=val1+val2;
+// else if(clicked_id=="sub")
+//  document.getElementById("answer").value=val1-val2;
+// else if(clicked_id=="mul")
+//  document.getElementById("answer").value=val1*val2;
+// else if(clicked_id=="div")
+//  document.getElementById("answer").value=val1/val2;
+// }
+// function cls()
+// {
+//  value1.value="0";
+//  value2.value="0";
+//  answer.value="";
+// }
+// </script>
+// </head>
+// <body>
+
+
+// <table>
+// <tr>
+// <th colspan="4"> SIMPLE CALCULATOR </th>
+// </tr>
+
+// <tr>
+// <td>value1</td><td><input type="text" id="value1" value="0"/></td>
+// <td>value2</td><td><input type="text" id= "value2" value="0"/></td>
+// </tr> 
+
+// <tr>
+// <td><input type="button" value="Addition" id = "add" onclick="calc(this.id)"/></td>
+// <td><input type="button" value="Subtraction" id = "sub" onclick="calc(this.id)"/></td>
+// <td><input type="button" value="Multiplication" id = "mul" onclick="calc(this.id)"/></td>
+// <td><input type="button" value="Division" id ="div" onclick="calc(this.id)"/></td>
+// </tr>
+
+// <tr>
+// <td>Answer:</td><td> <input type= "text" id="answer" value="" disabled/></td>
+// <td colspan="2"><input type= "button" value="CLEAR ALL" onclick="cls()"/><td>
+// </tr>
+// </table
+// </body>
+// </html>
+//  -->

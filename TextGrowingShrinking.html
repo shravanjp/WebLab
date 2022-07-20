@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>TextGrowing and TextShrinking</title>
+    </head>
+    <body>
+        <div id="h"></div>
+        <script>
+            var fontSize=0,color="blue",flag=1,txt="Text Growing";
+            function a(){
+                if(flag==1){
+                    fontSize+=5;
+                    color="blue";
+                    txt="Text Growing";
+                }
+                else{
+                    fontSize-=5;
+                    color="red";
+                    txt="Text Shrinking";
+                }
+                document.getElementById("h").innerHTML ="<h1 style=\"font-size:"+fontSize+"px;margin:0px; color:"+color+"\" ><b>"+txt+"</b></h1>"
+                if(fontSize==50){
+                    flag=0;
+                    txt="Text Shrinking";
+                }
+                if(fontSize==5){
+                    flag=1;
+                    txt="Text Growing ";
+                }
+                cb();
+            }
+            function cb(){
+                setTimeout(a,300);
+            }
+            cb();
+        </script>
+    </body>
+</html>
+

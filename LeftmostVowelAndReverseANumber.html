@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>Leftmost Vowel and Reverse of a Number</title>
+    </head>
+    <body>
+        <script>
+            var str = prompt("Enter the input");
+            if(!(isNaN(str))){
+                var rev=0,rem=0,temp;
+                var num = parseInt(str);
+                temp = num;
+                while(temp){
+                    rem = temp%10;
+                    temp = parseInt(temp/10);
+                    rev = rev*10+rem;
+                }
+                alert("Reverse of "+num+" is :"+rev);
+            }
+            else{
+                
+                var tempStr=str.toUpperCase();
+                let i;
+                for(i=0;i<tempStr.length;i++){
+                    var ch=tempStr.charAt(i);
+                    if(ch=='A'||ch=='E'||ch=='I'||ch=='O'||ch=='U'){
+                        break;
+                    }
+                    
+                }
+                if(i<tempStr.length)
+                    alert("The position of first vowel in "+str+" is :"+i);
+                else{
+                    alert("No vowel found");
+                }
+            }
+        </script>
+    </body>
+</html>

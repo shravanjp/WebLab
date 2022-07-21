@@ -1,0 +1,44 @@
+<?xml-stylesheet type="text/css" href="stdInfoXMLStyle.css"?>
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <h1>Student Description</h1>
+    </head>
+    <students>
+        <student>
+            <usn>USN: 4MT19CS101</usn>
+            <name>Name: Shama</name>
+            <college>College: MITE</college>
+            <branch>Branch: CSE</branch>
+            <year>Year: 2019</year>
+            <email>Email: shama@gmail.com</email>
+        </student>
+
+        <student>
+            <usn>USN: 4MT19CS102</usn>
+            <name>Name: Aman</name>
+            <college>College: MITE</college>
+            <branch>Branch: ISE</branch>
+            <year>Year: 2019</year>
+            <email>Email: aman@gmail.com</email>
+        </student>
+
+        <student>
+            <usn>USN: 4MT19CS103</usn>
+            <name>Name: Bhuvan</name>
+            <college>College: MITE</college>
+            <branch>Branch: CSE</branch>
+            <year>Year: 2019</year>
+            <email>Email: bhuvan@gmail.com</email>
+        </student>
+
+        <student>
+            <usn>USN: 4MT19CS104</usn>
+            <name>Name: Rashmitha</name>
+            <college>College: MITE</college>
+            <branch>Branch: CSE</branch>
+            <year>Year: 2019</year>
+            <email>Email: rashmi@gmail.com</email>
+        </student>
+    </students>
+</html>

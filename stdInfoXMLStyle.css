@@ -1,0 +1,18 @@
+head>h1{
+    display:block;
+    text-align: center;
+    color: magenta;
+    font-size: 50px;
+}
+student{
+    display: block; 
+    margin-top:20px;
+}
+student *{
+    text-align: center;
+    display: block;
+    margin-left: 20px;
+}
+usn,name {color: blue;}
+college,branch {color: red;}
+year,email {color: green;}
